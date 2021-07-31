@@ -3,8 +3,12 @@
 ONE_METER = 100
 
 
+def cm_to_m(cm):
+    return cm/ONE_METER
+
+
 def compute_bmi(height_cm, weight):
-    height = height_cm/ONE_METER  # cmで受け取るのでメートルに治す (BMIはメートルで計算する)
+    height = cm_to_m(height_cm)  # BMIはメートルで計算する
     return weight/height**2
 
 
